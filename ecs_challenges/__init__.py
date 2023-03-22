@@ -724,7 +724,6 @@ def create_task(
     flag_containers = json.loads(challenge.flag_containers)
 
     if challenge.ssh_container in flag_containers:
-        print("Memery")
         environment_variables.append(
             ("SSH_KEY", os.environ.get("CONTAINER_SSH_PUBLIC_KEY", ""))
         )
