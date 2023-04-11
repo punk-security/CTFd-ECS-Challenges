@@ -51,12 +51,12 @@ function get_ecs_status(challenge) {
 
                 let status_check_interval = setInterval(function () {
                     let currentSecond = Math.floor(new Date().getTime() / 1000);
-                    let deltaSecond = Math.floor(currentSecond - initSecond / 5);
+                    let deltaSecond = Math.floor((currentSecond - initSecond) / 10);
                     let funny_words = [
                         'Provisioning ECS tasks...',
                         'Creating Security Groups...',
-                        'Spinning up EC2 instances...',
-                        'Getting Guacamole ready...'
+                        'Getting Guacamole ready...',
+                        'Injecting flags...'
                     ]
 
                     if (item.guacamole) {
