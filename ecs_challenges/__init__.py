@@ -717,8 +717,7 @@ def create_task(
                 return False, ["You have already solved this task!"]
 
     # Prevent users from starting tasks when the CTF is paused
-    print(f"get_config(\"paused\"): {get_config('paused')}")
-    if not is_admin() and get_config("paused", "0") == 1:
+    if not is_admin() and get_config("paused", 0) == 1:
         return False, ["Cannot start challenges whilst CTF is paused!"]
 
     environment_variables = [
