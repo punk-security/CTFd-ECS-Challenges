@@ -1286,7 +1286,7 @@ class JWTFetcher(Resource):
         # Create a JWT for this address to hand over to Guacamole
 
         payload = guacamole.createJSON(
-            session.id, address, protocol, history_entry.recording_uuid
+            "1", address, protocol, history_entry.recording_uuid
         )
         jwt = guacamole.encryptJWT(GUACAMOLE_JSON_SECRET_KEY, json.dumps(payload))
 
