@@ -121,7 +121,7 @@ class guacamole:
                 "username": "",
                 "expires": str(TIMESTAMP).split(".")[0] + "000",
                 "connections": {
-                    ID: {
+                    "1": {
                         "protocol": "ssh",
                         "parameters": {
                             "hostname": IP_ADDRESS.strip(),
@@ -143,7 +143,7 @@ class guacamole:
                 "username": "",
                 "expires": str(TIMESTAMP).split(".")[0] + "000",
                 "connections": {
-                    ID: {
+                    "1": {
                         "protocol": "vnc",
                         "parameters": {
                             "hostname": IP_ADDRESS.strip(),
